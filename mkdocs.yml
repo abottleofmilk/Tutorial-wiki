@@ -1,3 +1,52 @@
-site_name: My Docs
+site_name: 发烧的客体-Tutorial-Wiki
+nav:
+  - Home : index.md
+  - Programming:
+      - Python:
+          - Python基础: Programming/Python/Python基础.md
+      - Go: Programming/Go.md
+      - Rust: Programming/Rust.md
+      - C: Programming/C.md
+      - Cpp: Programming/Cpp.md
+      - Csharp: Programming/Csharp.md
+      - JavaScript: Programming/JavaScript.md
+      - Java: Programming/Java.md
+      - TypeScript: Programming/TypeScript.md
+      - Bash: Programming/Bash.md
+      - CSS3: Programming/CSS3.md
+      - HTML5: Programming/HTML5.md
+      - Nodejs: Programming/Nodejs.md
+      - PowerShell: Programming/PowerShell.md
+  - Tutorial:
+      - Python:
+          - mkdocs-material: Tutorial/python/mkdocs-material.md
+          - scipy: Tutorial/python/scipy.md
+          - Matplotlib: Tutorial/python/Matplotlib.md
+          - pyautogui: Tutorial/python/pyautogui.md
+          - Pandas: Tutorial/python/Pandas.md
+          - numpy: Tutorial/python/numpy.md
+          - PyQT: Tutorial/python/PyQT.md
+      - Open:
+          - OpenGL: Tutorial/Open/OpenGL.md
+          - OpenCV: Tutorial/Open/OpenCV.md
+      - Auto:
+          - Autoit: Tutorial/Auto/Autoit.md
+      - science:
+          - MATLAB: Tutorial/science/MATLAB.md
+  - Tools:
+      - Git: tools/Git.md
+      - Sigil: tools/Sigil.md
+  - Reference:
+      - 编辑器:
+          - vscode:
+              - vscode配置clang: Reference/编辑器/vscode/vscode配置clang.md
+      - 文章:
+          - 人工智能:
+              - open系列库: Reference/文章/人工智能/open系列库.md
 theme:
   name: material
+  features:
+    - navigation.tracking
+    - navigation.tabs # 上方
+#    - toc.integrate
+    - navigation.prune # 自动隐藏导航栏
