@@ -26,6 +26,7 @@ nav:
           - Pandas: Tutorial/python/Pandas.md
           - numpy: Tutorial/python/numpy.md
           - PyQT: Tutorial/python/PyQT.md
+          - Pyinstaller: Tutorial/python/Pyinstaller.md
       - Open:
           - OpenGL: Tutorial/Open/OpenGL.md
           - OpenCV: Tutorial/Open/OpenCV.md
@@ -33,6 +34,11 @@ nav:
           - Autoit: Tutorial/Auto/Autoit.md
       - science:
           - MATLAB: Tutorial/science/MATLAB.md
+      - GUI:
+          - QT: Tutorial/GUI/QT.md
+          - QML: Tutorial/GUI/QML.md
+          - WPF: Tutorial/GUI/WPF.md
+          - MFC: Tutorial/GUI/MFC.md
   - Tools:
       - Git: tools/Git.md
       - Sigil: tools/Sigil.md
