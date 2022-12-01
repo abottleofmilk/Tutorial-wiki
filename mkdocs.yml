@@ -3,20 +3,27 @@ nav:
   - Home : index.md
   - Programming:
       - Python:
-          - Python基础: Programming/Python/Python基础.md
-      - Go: Programming/Go.md
-      - Rust: Programming/Rust.md
-      - C: Programming/C.md
-      - Cpp: Programming/Cpp.md
-      - Csharp: Programming/Csharp.md
-      - JavaScript: Programming/JavaScript.md
-      - Java: Programming/Java.md
-      - TypeScript: Programming/TypeScript.md
-      - Bash: Programming/Bash.md
-      - CSS3: Programming/CSS3.md
-      - HTML5: Programming/HTML5.md
-      - Nodejs: Programming/Nodejs.md
-      - PowerShell: Programming/PowerShell.md
+          - Python基础:
+                - 词法分析: Programming/Python/Python基础/词法分析.md
+          - Python进阶:
+                - 进阶: Programming/Python/Python高级/Python高级.md
+          - Python高级:
+                - 高级: Programming/Python/Python进阶/Python进阶.md
+          - Python标准与常用库:
+                - 标准与常用: Programming/Python/Python标准与常用库/Python标准库.md
+      - Go: Programming/Go/Go.md
+      - Rust: Programming/Rust/Rust.md
+      - C: Programming/C/C.md
+      - Cpp: Programming/Cpp/Cpp.md
+      - Csharp: Programming/Csharp/Csharp.md
+      - JavaScript: Programming/JavaScript/JavaScript.md
+      - Java: Programming/Java/Java.md
+      - TypeScript: Programming/TypeScript/TypeScript.md
+      - Bash: Programming/Bash/Bash.md
+      - CSS3: Programming/CSS3/CSS3.md
+      - HTML5: Programming/HTML5/HTML5.md
+      - Nodejs: Programming/Nodejs/Nodejs.md
+      - PowerShell: Programming/PowerShell/PowerShell.md
   - Tutorial:
       - Python:
           - mkdocs-material: Tutorial/python/mkdocs-material.md
@@ -32,7 +39,7 @@ nav:
           - OpenCV: Tutorial/Open/OpenCV.md
       - Auto:
           - Autoit: Tutorial/Auto/Autoit.md
-      - science:
+      - Science:
           - MATLAB: Tutorial/science/MATLAB.md
       - GUI:
           - QT: Tutorial/GUI/QT.md
@@ -42,6 +49,7 @@ nav:
   - Tools:
       - Git: tools/Git.md
       - Sigil: tools/Sigil.md
+      - "CMake Cookbook": tools/CMake_Cookbook.md
   - Reference:
       - 编辑器:
           - vscode:
