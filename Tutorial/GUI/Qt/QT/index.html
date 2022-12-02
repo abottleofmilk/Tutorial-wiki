@@ -8,22 +8,55 @@
       
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>QT - 发烧的客体-Tutorial-Wiki</title>
+        <title>Qt基础 - 发烧的客体-Tutorial-Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.472b142f.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.08040f6c.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
+
+  
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag-icon--CSS3{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/></svg>');}.md-tag-icon--Python{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.25.18.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg>');}.md-tag-icon{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 14h-1c0-3.87-3.13-7-7-7h-1V5.73A2 2 0 1 0 10 4c0 .74.4 1.39 1 1.73V7h-1c-3.87 0-7 3.13-7 7H2c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h1v1a2 2 0 0 0 2 2h14c1.11 0 2-.89 2-2v-1h1c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1M9.79 16.5C9.4 15.62 8.53 15 7.5 15s-1.9.62-2.29 1.5c-.13-.31-.21-.64-.21-1a2.5 2.5 0 0 1 5 0c0 .36-.08.69-.21 1m9 0c-.39-.88-1.29-1.5-2.29-1.5s-1.9.62-2.29 1.5c-.13-.31-.21-.64-.21-1a2.5 2.5 0 0 1 5 0c0 .36-.08.69-.21 1Z"/></svg>');}.md-tag-icon--document{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m9 16v-2H6v2h9m3-4v-2H6v2h12Z"/></svg>');}.md-tag-icon--Qt{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.693 3.162H3.33L0 6.49v14.348h20.671L24 17.51V3.162zM12.785 18.4l-1.562.728-1.35-2.217c-.196.057-.499.09-.924.09-1.579 0-2.683-.425-3.305-1.276-.622-.85-.932-2.2-.932-4.033 0-1.84.319-3.206.949-4.098.63-.892 1.726-1.341 3.288-1.341 1.562 0 2.658.441 3.28 1.333.63.883.94 2.25.94 4.098 0 1.219-.13 2.2-.384 2.945-.261.752-.679 1.325-1.268 1.718zm4.736-1.587c-.858 0-1.447-.196-1.766-.59-.32-.392-.483-1.136-.483-2.232v-3.534H14.11V9.051h1.162V6.843h1.644V9.05h2.094v1.415h-2.094v3.346c0 .622.05 1.03.14 1.227.09.204.326.303.695.303l1.243-.05.073 1.326c-.67.13-1.186.196-1.546.196zm-8.58-9.08c-.95 0-1.604.311-1.963.94-.352.63-.532 1.629-.532 3.011 0 1.374.172 2.364.515 2.953.344.589 1.006.892 1.98.892.973 0 1.628-.295 1.971-.876.335-.58.507-1.57.507-2.953 0-1.39-.172-2.396-.523-3.026-.352-.63-1.006-.94-1.955-.94Z"/></svg>');}</style>
 
     
     
@@ -37,7 +70,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +109,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="发烧的客体-Tutorial-Wiki" class="md-header__button md-logo" aria-label="发烧的客体-Tutorial-Wiki" data-md-component="logo">
+    <a href="../../../.." title="发烧的客体-Tutorial-Wiki" class="md-header__button md-logo" aria-label="发烧的客体-Tutorial-Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -95,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              QT
+              Qt基础
             
           </span>
         </div>
@@ -118,10 +151,16 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -158,7 +197,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../.." class="md-tabs__link">
+    <a href="../../../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -183,7 +222,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../Programming/Python/Python%E5%9F%BA%E7%A1%80/%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/" class="md-tabs__link">
+      <a href="../../../../Programming/Python/Python%E5%9F%BA%E7%A1%80/%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/" class="md-tabs__link">
         Programming
       </a>
     </li>
@@ -210,7 +249,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../python/mkdocs-material/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../python/mkdocs-material/" class="md-tabs__link md-tabs__link--active">
         Tutorial
       </a>
     </li>
@@ -228,7 +267,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../tools/Git/" class="md-tabs__link">
+      <a href="../../../../tools/Git/" class="md-tabs__link">
         Tools
       </a>
     </li>
@@ -254,7 +293,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../Reference/%E7%BC%96%E8%BE%91%E5%99%A8/vscode/vscode%E9%85%8D%E7%BD%AEclang/" class="md-tabs__link">
+      <a href="../../../../Reference/%E7%BC%96%E8%BE%91%E5%99%A8/vscode/vscode%E9%85%8D%E7%BD%AEclang/" class="md-tabs__link">
         Reference
       </a>
     </li>
@@ -263,6 +302,18 @@
   
 
   
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../tags/" class="md-tabs__link">
+      Tags
+    </a>
+  </li>
 
       
     </ul>
@@ -286,7 +337,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="发烧的客体-Tutorial-Wiki" class="md-nav__button md-logo" aria-label="发烧的客体-Tutorial-Wiki" data-md-component="logo">
+    <a href="../../../.." title="发烧的客体-Tutorial-Wiki" class="md-nav__button md-logo" aria-label="发烧的客体-Tutorial-Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -305,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -398,8 +449,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming/Python/Python%E5%9F%BA%E7%A1%80/%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/" class="md-nav__link">
+      <a href="../../../../Programming/Python/Python%E5%9F%BA%E7%A1%80/%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/" class="md-nav__link">
         词法分析
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Programming/Python/Python%E5%9F%BA%E7%A1%80/%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5IO/" class="md-nav__link">
+        IO详解
       </a>
     </li>
   
@@ -445,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming/Python/Python%E9%AB%98%E7%BA%A7/Python%E9%AB%98%E7%BA%A7/" class="md-nav__link">
+      <a href="../../../../Programming/Python/Python%E9%AB%98%E7%BA%A7/Python%E9%AB%98%E7%BA%A7/" class="md-nav__link">
         进阶
       </a>
     </li>
@@ -492,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming/Python/Python%E8%BF%9B%E9%98%B6/Python%E8%BF%9B%E9%98%B6/" class="md-nav__link">
+      <a href="../../../../Programming/Python/Python%E8%BF%9B%E9%98%B6/Python%E8%BF%9B%E9%98%B6/" class="md-nav__link">
         高级
       </a>
     </li>
@@ -539,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming/Python/Python%E6%A0%87%E5%87%86%E4%B8%8E%E5%B8%B8%E7%94%A8%E5%BA%93/Python%E6%A0%87%E5%87%86%E5%BA%93/" class="md-nav__link">
+      <a href="../../../../Programming/Python/Python%E6%A0%87%E5%87%86%E4%B8%8E%E5%B8%B8%E7%94%A8%E5%BA%93/Python%E6%A0%87%E5%87%86%E5%BA%93/" class="md-nav__link">
         标准与常用
       </a>
     </li>
@@ -567,7 +632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming/Go/Go/" class="md-nav__link">
+      <a href="../../../../Programming/Go/Go/" class="md-nav__link">
         Go
       </a>
     </li>
@@ -581,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming/Rust/Rust/" class="md-nav__link">
+      <a href="../../../../Programming/Rust/Rust/" class="md-nav__link">
         Rust
       </a>
     </li>
@@ -595,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming/C/C/" class="md-nav__link">
+      <a href="../../../../Programming/C/C/" class="md-nav__link">
         C
       </a>
     </li>
@@ -609,7 +674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming/Cpp/Cpp/" class="md-nav__link">
+      <a href="../../../../Programming/Cpp/Cpp/" class="md-nav__link">
         Cpp
       </a>
     </li>
@@ -623,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming/Csharp/Csharp/" class="md-nav__link">
+      <a href="../../../../Programming/Csharp/Csharp/" class="md-nav__link">
         Csharp
       </a>
     </li>
@@ -637,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming/JavaScript/JavaScript/" class="md-nav__link">
+      <a href="../../../../Programming/JavaScript/JavaScript/" class="md-nav__link">
         JavaScript
       </a>
     </li>
@@ -651,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming/Java/Java/" class="md-nav__link">
+      <a href="../../../../Programming/Java/Java/" class="md-nav__link">
         Java
       </a>
     </li>
@@ -665,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming/TypeScript/TypeScript/" class="md-nav__link">
+      <a href="../../../../Programming/TypeScript/TypeScript/" class="md-nav__link">
         TypeScript
       </a>
     </li>
@@ -679,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming/Bash/Bash/" class="md-nav__link">
+      <a href="../../../../Programming/Bash/Bash/" class="md-nav__link">
         Bash
       </a>
     </li>
@@ -693,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming/CSS3/CSS3/" class="md-nav__link">
+      <a href="../../../../Programming/CSS3/CSS3/" class="md-nav__link">
         CSS3
       </a>
     </li>
@@ -707,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming/HTML5/HTML5/" class="md-nav__link">
+      <a href="../../../../Programming/HTML5/HTML5/" class="md-nav__link">
         HTML5
       </a>
     </li>
@@ -721,7 +786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming/Nodejs/Nodejs/" class="md-nav__link">
+      <a href="../../../../Programming/Nodejs/Nodejs/" class="md-nav__link">
         Nodejs
       </a>
     </li>
@@ -735,7 +800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming/PowerShell/PowerShell/" class="md-nav__link">
+      <a href="../../../../Programming/PowerShell/PowerShell/" class="md-nav__link">
         PowerShell
       </a>
     </li>
@@ -811,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/mkdocs-material/" class="md-nav__link">
+      <a href="../../../python/mkdocs-material/" class="md-nav__link">
         mkdocs-material
       </a>
     </li>
@@ -825,7 +890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/scipy/" class="md-nav__link">
+      <a href="../../../python/scipy/" class="md-nav__link">
         scipy
       </a>
     </li>
@@ -839,7 +904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/Matplotlib/" class="md-nav__link">
+      <a href="../../../python/Matplotlib/" class="md-nav__link">
         Matplotlib
       </a>
     </li>
@@ -853,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/pyautogui/" class="md-nav__link">
+      <a href="../../../python/pyautogui/" class="md-nav__link">
         pyautogui
       </a>
     </li>
@@ -867,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/Pandas/" class="md-nav__link">
+      <a href="../../../python/Pandas/" class="md-nav__link">
         Pandas
       </a>
     </li>
@@ -881,7 +946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/numpy/" class="md-nav__link">
+      <a href="../../../python/numpy/" class="md-nav__link">
         numpy
       </a>
     </li>
@@ -895,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/PyQT/" class="md-nav__link">
+      <a href="../../../python/PyQT/" class="md-nav__link">
         PyQT
       </a>
     </li>
@@ -909,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/Pyinstaller/" class="md-nav__link">
+      <a href="../../../python/Pyinstaller/" class="md-nav__link">
         Pyinstaller
       </a>
     </li>
@@ -956,7 +1021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Open/OpenGL/" class="md-nav__link">
+      <a href="../../../Open/OpenGL/" class="md-nav__link">
         OpenGL
       </a>
     </li>
@@ -970,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Open/OpenCV/" class="md-nav__link">
+      <a href="../../../Open/OpenCV/" class="md-nav__link">
         OpenCV
       </a>
     </li>
@@ -1017,7 +1082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Auto/Autoit/" class="md-nav__link">
+      <a href="../../../Auto/Autoit/" class="md-nav__link">
         Autoit
       </a>
     </li>
@@ -1064,7 +1129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../science/MATLAB/" class="md-nav__link">
+      <a href="../../../science/MATLAB/" class="md-nav__link">
         MATLAB
       </a>
     </li>
@@ -1114,6 +1179,34 @@
     
   
   
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_1" type="checkbox" id="__nav_3_5_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5_1">
+          QT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="QT" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          QT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -1121,12 +1214,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          QT
+          Qt基础
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        QT
+        Qt基础
       </a>
       
         
@@ -1402,13 +1495,20 @@
 
             
           
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
             
               
   
   
   
     <li class="md-nav__item">
-      <a href="../QML/" class="md-nav__link">
+      <a href="../../QML/" class="md-nav__link">
         QML
       </a>
     </li>
@@ -1422,7 +1522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../WPF/" class="md-nav__link">
+      <a href="../../WPF/" class="md-nav__link">
         WPF
       </a>
     </li>
@@ -1436,7 +1536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MFC/" class="md-nav__link">
+      <a href="../../MFC/" class="md-nav__link">
         MFC
       </a>
     </li>
@@ -1491,7 +1591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/Git/" class="md-nav__link">
+      <a href="../../../../tools/Git/" class="md-nav__link">
         Git
       </a>
     </li>
@@ -1505,7 +1605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/Sigil/" class="md-nav__link">
+      <a href="../../../../tools/Sigil/" class="md-nav__link">
         Sigil
       </a>
     </li>
@@ -1519,7 +1619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/CMake_Cookbook/" class="md-nav__link">
+      <a href="../../../../tools/CMake_Cookbook/" class="md-nav__link">
         CMake Cookbook
       </a>
     </li>
@@ -1619,7 +1719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Reference/%E7%BC%96%E8%BE%91%E5%99%A8/vscode/vscode%E9%85%8D%E7%BD%AEclang/" class="md-nav__link">
+      <a href="../../../../Reference/%E7%BC%96%E8%BE%91%E5%99%A8/vscode/vscode%E9%85%8D%E7%BD%AEclang/" class="md-nav__link">
         vscode配置clang
       </a>
     </li>
@@ -1699,7 +1799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Reference/%E6%96%87%E7%AB%A0/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/open%E7%B3%BB%E5%88%97%E5%BA%93/" class="md-nav__link">
+      <a href="../../../../Reference/%E6%96%87%E7%AB%A0/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/open%E7%B3%BB%E5%88%97%E5%BA%93/" class="md-nav__link">
         open系列库
       </a>
     </li>
@@ -1723,6 +1823,21 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tags/" class="md-nav__link">
+        Tags
+      </a>
     </li>
   
 
@@ -2015,9 +2130,26 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+
+  <nav class="md-tags" >
+    
+      
+        
+        
+          
+        
+      
+      
+        <a href="../../../../tags/#qt" class="md-tag md-tag-icon md-tag-icon--Qt">Qt</a>
+      
+    
+  </nav>
 
 
-  <h1>QT</h1>
+
+
+  <h1>Qt基础</h1>
 
 <h2 id="_1">基础</h2>
 <h3 id="_2">前言</h3>
@@ -2645,7 +2777,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../../science/MATLAB/" class="md-footer__link md-footer__link--prev" aria-label="Previous: MATLAB" rel="prev">
+        <a href="../../../science/MATLAB/" class="md-footer__link md-footer__link--prev" aria-label="Previous: MATLAB" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2661,7 +2793,7 @@
       
       
         
-        <a href="../QML/" class="md-footer__link md-footer__link--next" aria-label="Next: QML" rel="next">
+        <a href="../../QML/" class="md-footer__link md-footer__link--next" aria-label="Next: QML" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -2698,10 +2830,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.prune"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.prune", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "tags": {"CSS3": "CSS3", "Document": "document", "Python": "Python", "Qt": "Qt"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
     
   </body>
