@@ -318,3 +318,4 @@ Qt 还提供了关联容器：`QMap`，`QMultiMap`，`QHash`，`QMultiHash`和`Q
 6. [Qt 5.9 C++开发指南|`王维波，栗宝鹃，侯春望`](https://weread.qq.com/web/reader/53d42262a43425f444a67387a4938767741546936634536636426ekc4c329b011c4ca4238a0201)
 7. [Python Qt GUI与数据可视化编程|`王维波，栗宝娟，张晓东`](https://weread.qq.com/web/reader/6393267071ccfa97639f573kc81322c012c81e728d9d180)
 8. [Python Qt |白月黑羽](https://www.byhy.net/tut/py/gui/qt_01/)
+9. [Qt编程快速入门](https://weread.qq.com/web/reader/9e3325a0719dadff9e397cakc81322c012c81e728d9d180)

@@ -1,0 +1,1 @@
+Model/View（模型/视图）结构是Qt中用界面组件显示与编辑数据的一种结构，视图（View）是显示和编辑数据的界面组件，模型（Model）是视图与原始数据之间的接口。Model/View结构的典型应用是在数据库应用程序中，例如数据库中的一个数据表可以在一个QTableView组件中显示和编辑。主要的视图组件有QListView、QTreeView和QTableView。
