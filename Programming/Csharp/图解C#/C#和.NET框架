@@ -1,0 +1,43 @@
+20 世纪 90 年代末, 使用微软平台的 Windows 编程分化成许多分支。大多数程序员使用 VisualBasic ( VB)、C 或 C++。一些 C 和 C++程序员在使用纯 Win32 API，但大多数人在使用 MFC (Microsoft Foundation Class，, 微软基础类库)。其他人已经转向了 COM ( Component Object Model, 组件对象模型）
+所有这些技术都有自己的问题。纯 Win32API 不是面向对象的，而且使用它的工作量比使用 MFC 的更大。MFC 是面向对象的，但是它不一致，并逐渐变得陈旧。COM 虽然概念简单，但它的实际代码复杂，并且需要很多丑陋的、不雅的底层基础代码。所有这些编程技术还有一个缺点是它们主要针对桌面程序而不是互联网进行开发。那时，Web 编程还是以后的事情, 而且看起来和桌面编程非常不同。
+2002 年，微软发布了. NET 框架的第一个版本，声称其解决了原有问题并实现了下一代系统的目标。. NET 框架是一种比 MFC 和 COM 编程技术更一致并面向对象的环境。它的特点包括以下几点。
+
+1. 多平台该系统可以在各种计算机上运行，从服务器、桌面机到 PDA，还能在移动电话. 上运行。
+2. 行业标准该系统使用行业标准的通信协议，比如 XML、HTTP、SOAP、JSON 和 wSDL。
+3. 安全性该系统能提供更加安全的执行环境，即使有来源可疑的代码存在。
+   . NET 框架由三部分组成，"执行环境称为 CLR ( Common Language Runtime, 公共语言运行库)。CLR 在运行时管理程序的执行，包括以下内容。
+   内存管理和垃圾收集。
+   代码安全验证。
+   代码执行、线程管理及异常处理。
+
+![](https://cdn.staticaly.com/gh/abottleofmilk/CDN@master/img/20221110074317.png)
+
+编程工具涵盖了编码和调试需要的一切，包括以下几点。Visual Studio 集成开发环境（ IDE )。
+. NET 兼容的编译器（例如:C#、Visual Basic . NET、F#、IronRuby 和托管的 C++)。调试器。
+Web 开发服务器端技术，比如 ASP. NET 或 WCF。
+BCL ( Base Class Library，基类库）是. NET 框架使用的一个大的类库，而且也可以在你的程序中使用。
+
+![](https://cdn.staticaly.com/gh/abottleofmilk/CDN@master/img/20221110074907.png)
+
+**每种编程语言都有一组内置的类型，用来表示如整数、浮点数和字符等之类的对象。过去，这些类型的特征因编程语言和平台的不同而不同**。例如，组成整数的位数对于不同的语言和平台就有很大差别。
+然而，这种统一性的缺乏使我们难以让使用不同语言编写的程序及库一起良好协作。为了有. 序协作，必须有一组标准。
+CLI ( Common Language Infrastructure，公共语言基础结构）就是这样一组标准，它把. NET 框架的所有组件连结成一个内聚的、一致的系统。它展示了系统的概念和架构，并详细说明了所有软件都必须遵守的规则和约定。
+
+### 各种缩写
+
+![](https://cdn.staticaly.com/gh/abottleofmilk/CDN@master/img/20221110135321.png)
+
+### C# 和 Windows 演变
+
+2007 年诞生的 iPhone 为 IT 产业掀开了面向移动设备的新篇章。而后，2008 年的 Android 设备和 2010 年的 iPad 接踵而来。微软自然不会错过移动设备市场，他们首先推出的是 WindowsMobile (一开始叫 PocketPC)，然后于 2010 年发布了 Windows Phone，最近发布的是 Windows 10Mobile，然而这些产品都不算成功。在撰写本书时，智能手机和平板电脑的销售数量已经数以亿计。从 2011 年开始，移动设备的年销售量就已经超过了个人电脑。
+为了应对这一市场转变，徽软于 2012 年推出了 Windows 8，其主旨在于为桌面电脑和移动设备提供相似的用户界面。Windows 8 是微软首个兼容 ARM 平板电脑和传统 x86PC 的操作系统。它还为可触摸的用户界面进行了诸多增强。
+通过适当的定制，能够创建出可在 PC 端和移动设备上运行的“Metro 应用”，这使得 Windows 8 开发者备受鼓舞。Metro 应用可以用如下语言进行开发:
+XAML 和 C#(或 VB. NET、CH+)
+HTML5、CSS3 和 JavaScript
+DirectX 和 C++
+2015 年发布的 Windows 10 引入了超越 Metro 应用的下一代平台——通用 Windows 平台 (Universal Windows Platform，UWP)。通用应用 ( universal app ) 的设计理念是，编写几乎相同的代码，运行于众多微软平台上。这些平台包括 PC、平板电脑、智能手机、Xbox One，以及大量的专用设备。不过，通用应用并未染指 Android 和 iOS 平台。·
+Windows 10 Core（不要与. NET Core 混淆）是可用于运行·Windows 10 的所有设备的公共平台。通用应用不但能够调用所有 Windows 10 设备的公共 API ( Windows 10 Core API)，还能调用用于特定设备（如桌面电脑、手机和 Xbox) 的 API，这意味着其集成度远远超过了 Windows 8, 因为后者在为不同种类的设备创建应用时需要做更多的工作。
+Windows 10 已经被广泛接受，在本书编写时，其普及程度已可与微软迄今为止最成功的操作系统 Windows 7 相提并论。尽管在智能手机和平板市场，微软的普及程度还远不及 Android 和苹果，但通用应用为开发者推广自己的应用程序提供了良好的平台。
+可以开发 Metro 应用的那些语言仍然可以开发通用应用。虽然选择很多，但 C# 因其与 VisualStudio 的高度集成以及徽软的大力扶持，依旧是开发者们的首选。
+在 StackOverflow 2017 年的开发者调查报告中，C# 是第四流行的编程语言（位于 JavaScript、SQL 和 Java 之后)，在最受喜爱的编程语言中位列第八（位于 JavaScript、SQL 和 Java 之前)，它甚至不在最“恶心”的 25 种编程语言中 (JavaScript、SQL 和 Java 均位列其中) 。
+结论显而易见。成千上万的开发者使用 C# 作为常用语言，他们中的绝大多数都使用得非常开心。这是一门优雅的语言。
