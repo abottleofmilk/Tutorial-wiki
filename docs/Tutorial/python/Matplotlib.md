@@ -329,87 +329,9 @@ plt.title(r'$\alpha > \beta$')
 
 
 
-## 后端
 
-Matplotlib 针对许多不同的用例和输出格式。有些人在 Python shell 中以交互方式使用 Matplotlib，并在键入命令时弹出绘图窗口。有些人运行 Jupyter笔记本并绘制内联图以进行快速数据分析。其他人将 Matplotlib 嵌入到 PyQt 或 PyGObject 等图形用户界面中以构建丰富的应用程序。有些人在批处理脚本中使用 Matplotlib 从数值模拟中生成 postscript 图像，还有一些人运行 Web 应用程序服务器来动态提供图形。
 
-为了支持所有这些用例，Matplotlib 可以针对不同的输出，并且这些功能中的每一个都称为后端；**“前端”是面向用户的代码，即绘图代码，而“后端”则在幕后完成所有艰苦的工作以制作图形**。后端有两种类型：用户界面后端（用于 PyQt/PySide、PyGObject、Tkinter、wxPython 或 macOS/Cocoa）；也称为“交互式后端”）和制作图像文件的硬拷贝后端（PNG、SVG、PDF、PS；也称为“非交互式后端”）。
 
-### 选择后端
-
-- 文件中的`rcParams["backend"]`参数`matplotlibrc`
-- 这[`MPLBACKEND`](https://matplotlib.org/stable/users/faq/environment_variables_faq.html#envvar-MPLBACKEND)环境变量
-- 功能[`matplotlib.use()`](https://matplotlib.org/stable/api/matplotlib_configuration_api.html#matplotlib.use)
-
-### 内置后端
-
-#### 非交互式
-
-| Renderer | Filetypes         | Description                                                  |
-| -------- | ----------------- | ------------------------------------------------------------ |
-| AGG      | png               | [raster](https://en.wikipedia.org/wiki/Raster_graphics) graphics -- high quality images using the [Anti-Grain Geometry](http://agg.sourceforge.net/antigrain.com/) engine. |
-| PDF      | pdf               | [vector](https://en.wikipedia.org/wiki/Vector_graphics) graphics -- [Portable Document Format](https://en.wikipedia.org/wiki/Portable_Document_Format) output. |
-| PS       | ps, eps           | [vector](https://en.wikipedia.org/wiki/Vector_graphics) graphics -- [PostScript](https://en.wikipedia.org/wiki/PostScript) output. |
-| SVG      | svg               | [vector](https://en.wikipedia.org/wiki/Vector_graphics) graphics -- [Scalable Vector Graphics](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) output. |
-| PGF      | pgf, pdf          | [vector](https://en.wikipedia.org/wiki/Vector_graphics) graphics -- using the [pgf](https://ctan.org/pkg/pgf) package. |
-| Cairo    | png, ps, pdf, svg | [raster](https://en.wikipedia.org/wiki/Raster_graphics) or [vector](https://en.wikipedia.org/wiki/Vector_graphics) graphics -- using the [Cairo](https://www.cairographics.org) library (requires [pycairo](https://www.cairographics.org/pycairo/) or [cairocffi](https://pythonhosted.org/cairocffi/)). |
-
-要使用非交互式后端保存绘图，请使用该 `matplotlib.pyplot.savefig('filename')`方法。
-
-#### 交互式
-
-| Backend   | Description                                                  |
-| --------- | ------------------------------------------------------------ |
-| QtAgg     | Agg rendering in a [Qt](https://qt.io/) canvas (requires [PyQt](https://riverbankcomputing.com/software/pyqt/intro) or [Qt for Python](https://doc.qt.io/qtforpython/), a.k.a. PySide). This backend can be activated in IPython with `%matplotlib qt`. |
-| ipympl    | Agg rendering embedded in a Jupyter widget (requires [ipympl](https://www.matplotlib.org/ipympl)). This backend can be enabled in a Jupyter notebook with `%matplotlib ipympl`. |
-| GTK3Agg   | Agg rendering to a [GTK](https://www.gtk.org/) 3.x canvas (requires [PyGObject](https://wiki.gnome.org/action/show/Projects/PyGObject) and [pycairo](https://www.cairographics.org/pycairo/)). This backend can be activated in IPython with `%matplotlib gtk3`. |
-| GTK4Agg   | Agg rendering to a [GTK](https://www.gtk.org/) 4.x canvas (requires [PyGObject](https://wiki.gnome.org/action/show/Projects/PyGObject) and [pycairo](https://www.cairographics.org/pycairo/)). This backend can be activated in IPython with `%matplotlib gtk4`. |
-| macosx    | Agg rendering into a Cocoa canvas in OSX. This backend can be activated in IPython with `%matplotlib osx`. |
-| TkAgg     | Agg rendering to a [Tk](https://www.tcl.tk/) canvas (requires [TkInter](https://docs.python.org/3/library/tk.html)). This backend can be activated in IPython with `%matplotlib tk`. |
-| nbAgg     | Embed an interactive figure in a Jupyter classic notebook. This backend can be enabled in Jupyter notebooks via `%matplotlib notebook`. |
-| WebAgg    | On `show()` will start a tornado server with an interactive figure. |
-| GTK3Cairo | Cairo rendering to a [GTK](https://www.gtk.org/) 3.x canvas (requires [PyGObject](https://wiki.gnome.org/action/show/Projects/PyGObject) and [pycairo](https://www.cairographics.org/pycairo/)). |
-| GTK4Cairo | Cairo rendering to a [GTK](https://www.gtk.org/) 4.x canvas (requires [PyGObject](https://wiki.gnome.org/action/show/Projects/PyGObject) and [pycairo](https://www.cairographics.org/pycairo/)). |
-| wxAgg     | Agg rendering to a [wxWidgets](https://www.wxwidgets.org/) canvas (requires [wxPython](https://www.wxpython.org/) 4). This backend can be activated in IPython with `%matplotlib wx`. |
-
-内置后端的名称不区分大小写；例如，'QtAgg' 和 'qtagg' 是等价的。
-
-## 互动
-
-### 互动模式
-
-| [`pyplot.ion`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ion.html#matplotlib.pyplot.ion) | 启用交互模式。                     |
-| ------------------------------------------------------------ | ---------------------------------- |
-| [`pyplot.ioff`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ioff.html#matplotlib.pyplot.ioff) | 禁用交互模式。                     |
-| [`pyplot.isinteractive`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.isinteractive.html#matplotlib.pyplot.isinteractive) | 返回绘图是否在每个绘图命令后更新。 |
-
-| [`pyplot.show`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show) | 显示所有打开的图形。            |
-| ------------------------------------------------------------ | ------------------------------- |
-| [`pyplot.pause`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pause.html#matplotlib.pyplot.pause) | 运行 GUI 事件循环*interval*秒。 |
-
-如果您处于非交互模式（或在非交互模式下创建图形），您可能需要显式调用[`pyplot.show`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show) 以在屏幕上显示窗口。如果只想在固定的时间内运行 GUI 事件循环，则可以使用[`pyplot.pause`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pause.html#matplotlib.pyplot.pause). 这将阻止您的代码进度，就好像您调用了 一样 [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep)，确保显示当前窗口并在需要时重新绘制，并在指定的时间段内运行 GUI 事件循环。与您的命令提示符集成的 GUI 事件循环和处于交互模式的图形彼此独立。如果你使用[`pyplot.ion`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ion.html#matplotlib.pyplot.ion)但没有安排事件循环集成，你的数字会出现但不会在提示等待输入时交互。您将无法平移/缩放并且图形甚至可能无法呈现（窗口可能显示为黑色、透明或作为其下方桌面的快照）。相反，如果您配置事件循环集成，则显示的图形将在提示时等待输入时做出响应，而不管 pyplot 的“交互模式”如何。无论交互模式设置和事件循环集成的组合如何，如果您使用 、 或以其他方式运行 GUI 主循环，图形都会`pyplot.show(block=True)`响应[`pyplot.pause`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pause.html#matplotlib.pyplot.pause)。
-
-### 导航键盘快捷键
-
-创建的窗口[`pyplot`](https://matplotlib.org/stable/api/pyplot_summary.html#module-matplotlib.pyplot)有一个带有导航按钮的交互式工具栏和光标指向的数据值的读数。默认情况下注册了许多有用的键绑定。
-
-| Command                          | Default key binding and rcParam                              |
-| -------------------------------- | ------------------------------------------------------------ |
-| Home/Reset                       | `rcParams["keymap.home"]` (default: `['h', 'r', 'home']`)    |
-| Back                             | `rcParams["keymap.back"]` (default: `['left', 'c', 'backspace', 'MouseButton.BACK']`) |
-| Forward                          | `rcParams["keymap.forward"]` (default: `['right', 'v', 'MouseButton.FORWARD']`) |
-| Pan/Zoom                         | `rcParams["keymap.pan"]` (default: `['p']`)                  |
-| Zoom-to-rect                     | `rcParams["keymap.zoom"]` (default: `['o']`)                 |
-| Save                             | `rcParams["keymap.save"]` (default: `['s', 'ctrl+s']`)       |
-| Toggle fullscreen                | `rcParams["keymap.fullscreen"]` (default: `['f', 'ctrl+f']`) |
-| Toggle major grids               | `rcParams["keymap.grid"]` (default: `['g']`)                 |
-| Toggle minor grids               | `rcParams["keymap.grid_minor"]` (default: `['G']`)           |
-| Toggle x axis scale (log/linear) | `rcParams["keymap.xscale"]` (default: `['k', 'L']`)          |
-| Toggle y axis scale (log/linear) | `rcParams["keymap.yscale"]` (default: `['l']`)               |
-| Close Figure                     | `rcParams["keymap.quit"]` (default: `['ctrl+w', 'cmd+w', 'q']`) |
-| Constrain pan/zoom to x axis     | hold **x** when panning/zooming with mouse                   |
-| Constrain pan/zoom to y axis     | hold **y** when panning/zooming with mouse                   |
-| Preserve aspect ratio            | hold **CONTROL** when panning/zooming with mouse             |
 
 ## 字体
 
@@ -426,45 +348,6 @@ Matplotlib 针对许多不同的用例和输出格式。有些人在 Python shel
 | These fonts support font hinting                             | Do not support font hinting                                  | Hinting supported (virtual machine processes the "hints")    |
 | Non-subsetted through Matplotlib                             | Subsetted via external module [ttconv](https://github.com/sandflow/ttconv) | Subsetted via external module [fonttools](https://github.com/fonttools/fonttools) |
 
-## 事件处理
-
-### 事件连接
-
-```python
-fig, ax = plt.subplots()
-ax.plot(np.random.rand(10))
-
-def onclick(event):
-    print('%s click: button=%d, x=%d, y=%d, xdata=%f, ydata=%f' %
-          ('double' if event.dblclick else 'single', event.button,
-           event.x, event.y, event.xdata, event.ydata))
-
-cid = fig.canvas.mpl_connect('button_press_event', onclick) # 返回连接id
-fig.canvas.mpl_disconnect(cid)  #断开连接
-```
-
-当连接到 'key_press_event' 和 'key_release_event' 事件时，您可能会遇到 Matplotlib 使用的不同用户界面工具包之间的不一致。这是由于用户界面工具包的不一致/限制造成的。
-
-| Event name             | Class                                                        | Description                                               |
-| ---------------------- | ------------------------------------------------------------ | --------------------------------------------------------- |
-| 'button_press_event'   | [`MouseEvent`](https://matplotlib.org/stable/api/backend_bases_api.html#matplotlib.backend_bases.MouseEvent) | mouse button is pressed                                   |
-| 'button_release_event' | [`MouseEvent`](https://matplotlib.org/stable/api/backend_bases_api.html#matplotlib.backend_bases.MouseEvent) | mouse button is released                                  |
-| 'close_event'          | [`CloseEvent`](https://matplotlib.org/stable/api/backend_bases_api.html#matplotlib.backend_bases.CloseEvent) | figure is closed                                          |
-| 'draw_event'           | [`DrawEvent`](https://matplotlib.org/stable/api/backend_bases_api.html#matplotlib.backend_bases.DrawEvent) | canvas has been drawn (but screen widget not updated yet) |
-| 'key_press_event'      | [`KeyEvent`](https://matplotlib.org/stable/api/backend_bases_api.html#matplotlib.backend_bases.KeyEvent) | key is pressed                                            |
-| 'key_release_event'    | [`KeyEvent`](https://matplotlib.org/stable/api/backend_bases_api.html#matplotlib.backend_bases.KeyEvent) | key is released                                           |
-| 'motion_notify_event'  | [`MouseEvent`](https://matplotlib.org/stable/api/backend_bases_api.html#matplotlib.backend_bases.MouseEvent) | mouse moves                                               |
-| 'pick_event'           | [`PickEvent`](https://matplotlib.org/stable/api/backend_bases_api.html#matplotlib.backend_bases.PickEvent) | artist in the canvas is selected                          |
-| 'resize_event'         | [`ResizeEvent`](https://matplotlib.org/stable/api/backend_bases_api.html#matplotlib.backend_bases.ResizeEvent) | figure canvas is resized                                  |
-| 'scroll_event'         | [`MouseEvent`](https://matplotlib.org/stable/api/backend_bases_api.html#matplotlib.backend_bases.MouseEvent) | mouse scroll wheel is rolled                              |
-| 'figure_enter_event'   | [`LocationEvent`](https://matplotlib.org/stable/api/backend_bases_api.html#matplotlib.backend_bases.LocationEvent) | mouse enters a new figure                                 |
-| 'figure_leave_event'   | [`LocationEvent`](https://matplotlib.org/stable/api/backend_bases_api.html#matplotlib.backend_bases.LocationEvent) | mouse leaves a figure                                     |
-| 'axes_enter_event'     | [`LocationEvent`](https://matplotlib.org/stable/api/backend_bases_api.html#matplotlib.backend_bases.LocationEvent) | mouse enters a new axes                                   |
-| 'axes_leave_event'     | [`LocationEvent`](https://matplotlib.org/stable/api/backend_bases_api.html#matplotlib.backend_bases.LocationEvent) | mouse leaves an axes                                      |
-
-### 事件属性
-
-所有 Matplotlib 事件都继承自 [`matplotlib.backend_bases.Event`](https://matplotlib.org/stable/api/backend_bases_api.html#matplotlib.backend_bases.Event)存储属性的基类。作为事件处理的基础的最常见事件是按键/释放事件以及鼠标按下/释放和移动事件。处理这些事件的[`KeyEvent`](https://matplotlib.org/stable/api/backend_bases_api.html#matplotlib.backend_bases.KeyEvent)和[`MouseEvent`](https://matplotlib.org/stable/api/backend_bases_api.html#matplotlib.backend_bases.MouseEvent)类都派生自 LocationEvent。[`MouseEvent`](https://matplotlib.org/stable/api/backend_bases_api.html#matplotlib.backend_bases.MouseEvent)我们刚刚使用的 是，因此我们可以通过和[`LocationEvent`](https://matplotlib.org/stable/api/backend_bases_api.html#matplotlib.backend_bases.LocationEvent)访问数据和像素坐标。除了属性，它还有`(event.x, event.y)``(event.xdata, event.ydata)``LocationEvent`。
 
 ## 交互式图像和异步编程
 

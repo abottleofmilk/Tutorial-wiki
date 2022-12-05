@@ -1,0 +1,87 @@
+nav:
+  - Home: index.md
+  - Programming:
+      - Python:
+          - Python基础:
+              - 词法分析: Programming/Python/Python基础/词法分析.md
+              - IO详解: Programming/Python/Python基础/同步异步IO.md
+          - Python进阶:
+              - 进阶: Programming/Python/Python高级/Python高级.md
+          - Python高级:
+              - 高级: Programming/Python/Python进阶/Python进阶.md
+          - Python标准与常用库:
+              - 标准与常用: Programming/Python/Python标准与常用库/Python标准库.md
+          - Python官方文档:
+             - 术语对照表:  Programming/Python/Python官方文档/术语对照表.md
+      - Go: Programming/Go/Go.md
+      - Rust: Programming/Rust/Rust.md
+      - C: Programming/C/C.md
+      - Cpp: Programming/Cpp/Cpp.md
+      - Csharp:
+          - 图解C#:
+              - 异步编程: Programming/Csharp/图解C#/异步编程.md
+      - JavaScript: Programming/JavaScript/JavaScript.md
+      - Java: Programming/Java/Java.md
+      - TypeScript: Programming/TypeScript/TypeScript.md
+      - Bash: Programming/Bash/Bash.md
+      - CSS3: Programming/CSS3/CSS3.md
+      - HTML5: Programming/HTML5/HTML5.md
+      - Nodejs: Programming/Nodejs/Nodejs.md
+      - PowerShell: Programming/PowerShell/PowerShell.md
+  - Tutorial:
+      - "front-end":
+          - Vue: Tutorial/front-end/vue/Vue基础.md
+          - React: Tutorial/front-end/react/React基础.md
+      - Python:
+          - mkdocs-material: Tutorial/python/mkdocs-material.md
+          - scipy: Tutorial/python/scipy.md
+          - Matplotlib: Tutorial/python/Matplotlib.md
+          - pyautogui: Tutorial/python/pyautogui.md
+          - Pandas: Tutorial/python/Pandas.md
+          - numpy: Tutorial/python/numpy.md
+          - PyQT: Tutorial/python/PyQT.md
+          - Pyinstaller: Tutorial/python/Pyinstaller.md
+      - Open:
+          - OpenGL: Tutorial/Open/OpenGL.md
+          - OpenCV: Tutorial/Open/OpenCV.md
+      - Auto:
+          - Autoit: Tutorial/Auto/Autoit.md
+      - Science:
+          - MATLAB: Tutorial/science/MATLAB.md
+      - GUI:
+          - QT:
+              - Qt基础: Tutorial/GUI/Qt/Qt.md
+              - 布局管理: Tutorial/GUI/Qt/布局管理.md
+              - 对话框: Tutorial/GUI/Qt/对话框.md
+              - 工具: Tutorial/GUI/Qt/工具.md
+              - 多媒体: Tutorial/GUI/Qt/多媒体.md
+              - 绘图: Tutorial/GUI/Qt/绘图.md
+              - 项: Tutorial/GUI/Qt/项.md
+              - 应用程序设计辅助功能: Tutorial/GUI/Qt/应用程序设计辅助功能.md
+              - 数据库: Tutorial/GUI/Qt/数据库.md
+              - 窗口: Tutorial/GUI/Qt/窗口.md
+              - 网络编程: Tutorial/GUI/Qt/网络编程.md
+              - 事件与信号: Tutorial/GUI/Qt/事件与信号.md
+              - 文件: Tutorial/GUI/Qt/文件.md
+              - "Model&View": Tutorial/GUI/Qt/Model&View.md
+              - "QML 和 QtQuick 2": Tutorial/GUI/Qt/QML 和 QtQuick 2.md
+          - QML: Tutorial/GUI/QML.md
+          - WPF: Tutorial/GUI/WPF.md
+          - MFC: Tutorial/GUI/MFC.md
+  - Tools:
+      - Git: tools/Git.md
+      - Sigil: tools/Sigil.md
+      - "CMake Cookbook": tools/CMake_Cookbook.md
+      - "Vim": tools/vim.md
+      - "资源整合": tools/资源网.md
+  - Reference:
+      - 编辑器:
+          - vscode:
+              - vscode配置clang: Reference/编辑器/vscode/vscode配置clang.md
+      - 文章:
+          - 人工智能:
+              - open系列库: Reference/文章/人工智能/open系列库.md
+  - Other:
+      - reading:
+          - 七周七语言: Other/reading/七周七语言.md
+  - Tags: tags.md
