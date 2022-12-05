@@ -1,17 +1,17 @@
 site_name: 发烧的客体-Tutorial-Wiki
 nav:
-  - Home : index.md
+  - Home: index.md
   - Programming:
       - Python:
           - Python基础:
-                - 词法分析: Programming/Python/Python基础/词法分析.md
-                - IO详解: Programming/Python/Python基础/同步异步IO.md
+              - 词法分析: Programming/Python/Python基础/词法分析.md
+              - IO详解: Programming/Python/Python基础/同步异步IO.md
           - Python进阶:
-                - 进阶: Programming/Python/Python高级/Python高级.md
+              - 进阶: Programming/Python/Python高级/Python高级.md
           - Python高级:
-                - 高级: Programming/Python/Python进阶/Python进阶.md
+              - 高级: Programming/Python/Python进阶/Python进阶.md
           - Python标准与常用库:
-                - 标准与常用: Programming/Python/Python标准与常用库/Python标准库.md
+              - 标准与常用: Programming/Python/Python标准与常用库/Python标准库.md
       - Go: Programming/Go/Go.md
       - Rust: Programming/Rust/Rust.md
       - C: Programming/C/C.md
@@ -26,6 +26,9 @@ nav:
       - Nodejs: Programming/Nodejs/Nodejs.md
       - PowerShell: Programming/PowerShell/PowerShell.md
   - Tutorial:
+      - "front-end":
+          - Vue: Tutorial/front-end/vue/Vue基础.md
+          - React: Tutorial/front-end/react/React基础.md
       - Python:
           - mkdocs-material: Tutorial/python/mkdocs-material.md
           - scipy: Tutorial/python/scipy.md
@@ -43,8 +46,22 @@ nav:
       - Science:
           - MATLAB: Tutorial/science/MATLAB.md
       - GUI:
-          - QT: 
-            - Qt基础: Tutorial/GUI/Qt/QT.md
+          - QT:
+              - Qt基础: Tutorial/GUI/Qt/Qt.md
+              - 布局管理: Tutorial/GUI/Qt/布局管理.md
+              - 对话框: Tutorial/GUI/Qt/对话框.md
+              - 工具: Tutorial/GUI/Qt/工具.md
+              - 多媒体: Tutorial/GUI/Qt/多媒体.md
+              - 绘图: Tutorial/GUI/Qt/绘图.md
+              - 项: Tutorial/GUI/Qt/项.md
+              - 应用程序设计辅助功能: Tutorial/GUI/Qt/应用程序设计辅助功能.md
+              - 数据库: Tutorial/GUI/Qt/数据库.md
+              - 窗口: Tutorial/GUI/Qt/窗口.md
+              - 网络编程: Tutorial/GUI/Qt/网络编程.md
+              - 事件与信号: Tutorial/GUI/Qt/事件与信号.md
+              - 文件: Tutorial/GUI/Qt/文件.md
+              - "Model&View": Tutorial/GUI/Qt/Model&View.md
+              - "QML 和 QtQuick 2": Tutorial/GUI/Qt/QML 和 QtQuick 2.md
           - QML: Tutorial/GUI/QML.md
           - WPF: Tutorial/GUI/WPF.md
           - MFC: Tutorial/GUI/MFC.md
@@ -52,6 +69,8 @@ nav:
       - Git: tools/Git.md
       - Sigil: tools/Sigil.md
       - "CMake Cookbook": tools/CMake_Cookbook.md
+      - "Vim": tools/vim.md
+      - "资源整合": tools/资源网.md
   - Reference:
       - 编辑器:
           - vscode:
@@ -59,33 +78,36 @@ nav:
       - 文章:
           - 人工智能:
               - open系列库: Reference/文章/人工智能/open系列库.md
+  - Other:
+      - reading:
+          - 七周七语言: Other/reading/七周七语言.md
   - Tags: tags.md
 theme:
   name: material
-#   search_index_only: false
+  #   search_index_only: false
   icon:
-    tag: 
-       CSS3: simple/css3  
-       Python: simple/python
-       default: material/robot-happy
-       document: material/file-document
-       Qt: simple/qt
+    tag:
+      CSS3: simple/css3
+      Python: simple/python
+      default: material/robot-happy
+      document: material/file-document
+      Qt: simple/qt
   features:
     - navigation.tracking
     - navigation.tabs # 上方
-#    - toc.integrate
+    #    - toc.integrate
     - navigation.prune # 自动隐藏导航栏
     - search.highlight # 搜索内容匹配高亮
     - search.share #  当用户单击共享按钮时，URL 会自动复制到剪贴板。
     - search.suggest # 搜索建议
 plugins:
   - tags:
-         tags_file: tags.md
+      tags_file: tags.md
   - search:
-         separator: '[\s\-\.]+'
-         lang: 
-            - en
-            - ja
+      separator: '[\s\-\.]+'
+      lang:
+        - en
+        - ja
 extra:
   tags:
     CSS3: CSS3
