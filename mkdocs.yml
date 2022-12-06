@@ -35,6 +35,7 @@ nav:
           - mkdocs-material: Tutorial\python\mkdocs-material.md
           - scipy: Tutorial\python\scipy.md
           - Matplotlib: 
+            - 快速指南: Tutorial\python\Matplotlib\快速指南.md
             - 编码风格: Tutorial\python\Matplotlib\编码风格.md
             - 互动: Tutorial\python\Matplotlib\互动.md
             - 后端: Tutorial\python\Matplotlib\后端.md
@@ -47,6 +48,7 @@ nav:
                       - PyQtChart二维绘图: Tutorial\python\PyQt\Python Qt GUI与数据可视化编程\PyQtChart二维绘图.md
                       - PyQtDataVisualization三维绘图: Tutorial\python\PyQt\Python Qt GUI与数据可视化编程\PyQtDataVisualization三维绘图.md
                       - Matplotlib数据可视化: Tutorial\python\PyQt\Python Qt GUI与数据可视化编程\Matplotlib数据可视化.md
+                      - 事件处理: Tutorial\python\PyQt\Python Qt GUI与数据可视化编程\事件处理.md
           - Pyinstaller: Tutorial\python\Pyinstaller.md
       - Open:
           - OpenGL: Tutorial\Open\OpenGL.md
