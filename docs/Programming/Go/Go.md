@@ -5,3 +5,4 @@
 4. [Go语言圣经（中文版）](https://books.studygolang.com/gopl-zh/)
 5. [Golang标准库文档|中文](http://doc.golang.ltd/)
 6. [Go 技术论坛](https://learnku.com/go)
+7. [learning-golang](https://github.com/yangwenmai/learning-golang)
