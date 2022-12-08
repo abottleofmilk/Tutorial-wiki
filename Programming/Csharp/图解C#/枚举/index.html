@@ -94,6 +94,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1087,6 +1092,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../Tutorial/python/Matplotlib/%E5%BF%AB%E9%80%9F%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        快速指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../Tutorial/python/Matplotlib/%E7%BC%96%E7%A0%81%E9%A3%8E%E6%A0%BC/" class="md-nav__link">
         编码风格
       </a>
@@ -1101,7 +1120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tutorial/python/Matplotlib/%E4%BA%92%E5%8A%A8/" class="md-nav__link">
+      <a href="../../../../Tutorial/python/Matplotlib/互动.md" class="md-nav__link">
         互动
       </a>
     </li>
@@ -1115,7 +1134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tutorial/python/Matplotlib/%E5%90%8E%E7%AB%AF/" class="md-nav__link">
+      <a href="../../../../Tutorial/python/Matplotlib/后端.md" class="md-nav__link">
         后端
       </a>
     </li>
@@ -1286,6 +1305,20 @@
     <li class="md-nav__item">
       <a href="../../../../Tutorial/python/PyQt/Python%20Qt%20GUI%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E7%BC%96%E7%A8%8B/Matplotlib%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" class="md-nav__link">
         Matplotlib数据可视化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Tutorial/python/PyQt/Python%20Qt%20GUI%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E7%BC%96%E7%A8%8B/%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/" class="md-nav__link">
+        事件处理
       </a>
     </li>
   
@@ -2306,6 +2339,55 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    枚举
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    位标志
+  </a>
+  
+    <nav class="md-nav" aria-label="位标志">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flags" class="md-nav__link">
+    Flags特性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    使用位标志的示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    关于枚举的更多内容
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2324,7 +2406,36 @@
 
   <h1>枚举</h1>
 
-
+<h3 id="_1">枚举</h3>
+<p>枚举是由程序员定义的类型，与类或结构一样。</p>
+<ul>
+<li>与结构一样，枚举是值类型，因此直接存储它们的数据，而不是分开存储成引用和数据。</li>
+<li>枚举只有一种类型的成员:命名的整数值常量。</li>
+</ul>
+<p><img alt="image-20221206150025199" src="https://s2.loli.net/2022/12/06/nLw9GcCf2lF83bB.png" /></p>
+<h3 id="_2">位标志</h3>
+<h4 id="flags">Flags特性</h4>
+<h4 id="_3">使用位标志的示例</h4>
+<h3 id="_4">关于枚举的更多内容</h3>
+<p>枚举只有单一的成员类型:声明的成员常量。</p>
+<ul>
+<li>不能对成员使用修饰符。它们都隐式地具有和枚举相同的可访问性。</li>
+<li>由于成员是静态的，即使在没有该枚举类型的变量时也可以访问它们。</li>
+</ul>
+<p>和所有的静态类型--样，访问枚举的成员有两种方法。</p>
+<ul>
+<li>可以使用类型名称，后面跟着一个点和成员名。</li>
+<li>从C#6.0开始，可以使用using static指令来避免在每次使用时都包含类名。这可以使代码再简洁</li>
+</ul>
+<p><img alt="image-20221206150406418" src="https://s2.loli.net/2022/12/06/PFzxRk964OyNXuj.png" /></p>
+<p>枚举是一个独特的类型。比较不同枚举类型的成员会导致编译时错误。</p>
+<p><img alt="image-20221206150646841" src="https://s2.loli.net/2022/12/06/TLBCGUgeklEJRyp.png" /></p>
+<p>.NET Enum类型（ enum就是基于该类型的)还包括一些有用的静态方法:</p>
+<ul>
+<li>GetName方法以一个枚举类型对象和一个整数为参数，返回相应的枚举成员的名称;</li>
+<li>GetNames方法以一个枚举类型对象为参数，返回该枚举中所有成员的名称。</li>
+</ul>
+<p><img alt="image-20221206151005863" src="https://s2.loli.net/2022/12/06/aMpwsLoG5b91Z3Y.png" /></p>
 
 
 
