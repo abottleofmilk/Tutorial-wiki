@@ -34,11 +34,11 @@ nav:
       - Python:
           - mkdocs-material: Tutorial\python\mkdocs-material.md
           - scipy: Tutorial\python\scipy.md
-          - Matplotlib: 
-            - 快速指南: Tutorial\python\Matplotlib\快速指南.md
-            - 编码风格: Tutorial\python\Matplotlib\编码风格.md
-            - 互动: Tutorial\python\Matplotlib\互动.md
-            - 后端: Tutorial\python\Matplotlib\后端.md
+          - Matplotlib:
+              - 快速指南: Tutorial\python\Matplotlib\快速指南.md
+              - 编码风格: Tutorial\python\Matplotlib\编码风格.md
+              - 交互figures: Tutorial\python\Matplotlib\说明\交互figures.md
+              - 后端: Tutorial\python\Matplotlib\说明\后端.md
           - pyautogui: Tutorial\python\pyautogui.md
           - Pandas: Tutorial\python\Pandas.md
           - numpy: Tutorial\python\numpy.md
@@ -52,7 +52,10 @@ nav:
           - Pyinstaller: Tutorial\python\Pyinstaller.md
       - Open:
           - OpenGL: Tutorial\Open\OpenGL.md
-          - OpenCV: Tutorial\Open\OpenCV.md
+          - OpenCV:
+              - OpenCV轻松入门-面向Python:
+                  - OpenCV入门: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\OpenCV入门.md
+                  - 图像处理基础: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\图像处理基础.md
       - Auto:
           - Autoit: Tutorial\Auto\Autoit.md
       - Science:
@@ -92,7 +95,7 @@ nav:
           - 人工智能:
               - open系列库: Reference\文章\人工智能\open系列库.md
   - Embedded:
-    - Arduino: Tutorial\Embedded\Arduino\Arduino.md
+      - Arduino: Tutorial\Embedded\Arduino\Arduino.md
   - Other:
       - reading:
           - 七周七语言: Other\reading\七周七语言.md

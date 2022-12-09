@@ -335,18 +335,6 @@ plt.title(r'$\alpha > \beta$')
 
 ## 字体
 
-在 Matplotlib 内部使用字体是一个三步过程：
-
-1. 创建[`FontProperties`](https://matplotlib.org/stable/api/font_manager_api.html#matplotlib.font_manager.FontProperties)对象（显式或隐式）
-2. 基于[`FontProperties`](https://matplotlib.org/stable/api/font_manager_api.html#matplotlib.font_manager.FontProperties)对象，方法[`FontManager`](https://matplotlib.org/stable/api/font_manager_api.html#matplotlib.font_manager.FontManager)用于选择 Matplotlib 知道的最接近的“最佳”字体（SVG 模式除外 `'none'`）。
-3. 后端代码使用字体对象的 Python 代理来呈现文本——具体细节取决于后端通过[`font_manager.get_font`](https://matplotlib.org/stable/api/font_manager_api.html#matplotlib.font_manager.get_font).
-
-| Type 1 (PDF)                                                 | Type 3 (PDF/PS)                                              | TrueType (PDF)                                               |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| One of the oldest types, introduced by Adobe                 | Similar to Type 1 in terms of introduction                   | Newer than previous types, used commonly today, introduced by Apple |
-| Restricted subset of PostScript, charstrings are in bytecode | Full PostScript language, allows embedding arbitrary code (in theory, even render fractals when rasterizing!) | Include a virtual machine that can execute code!             |
-| These fonts support font hinting                             | Do not support font hinting                                  | Hinting supported (virtual machine processes the "hints")    |
-| Non-subsetted through Matplotlib                             | Subsetted via external module [ttconv](https://github.com/sandflow/ttconv) | Subsetted via external module [fonttools](https://github.com/fonttools/fonttools) |
 
 
 ## 交互式图像和异步编程
@@ -356,3 +344,4 @@ plt.title(r'$\alpha > \beta$')
 1. [matplotlib](https://matplotlib.org/stable/tutorials/index.html)
 2. [matplotlib教程](https://matplotlib.net/stable/tutorials/index.html)
 3. [matplotlib中文网](https://www.matplotlib.org.cn/tutorials/#%E5%BA%8F%E8%A8%80)
+4. [Matplotlib 用户指南](http://mpl.apachecn.org/#/)
