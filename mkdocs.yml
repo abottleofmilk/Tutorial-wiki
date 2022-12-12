@@ -84,6 +84,26 @@ nav:
               - OpenCV轻松入门-面向Python:
                   - OpenCV入门: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\OpenCV入门.md
                   - 图像处理基础: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\图像处理基础.md
+                  - 图像运算: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\图像运算.md
+                  - 色彩空间类型转换: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\色彩空间类型转换.md
+                  - 几何变换: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\几何变换.md
+                  - 阈值处理: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\阈值处理.md
+                  - 图像平滑处理: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\图像平滑处理.md
+                  - 形态学操作: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\形态学操作.md
+                  - 图像梯度: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\图像梯度.md
+                  - Canny边缘探测: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\Canny边缘探测.md
+                  - 图像金字塔: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\图像金字塔.md
+                  - 图像轮廓: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\图像轮廓.md
+                  - 直方图处理: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\直方图处理.md
+                  - 傅里叶变换: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\傅里叶变换.md
+                  - 模板匹配: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\模板匹配.md
+                  - 霍夫变换: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\霍夫变换.md
+                  - 图像分隔与提取: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\图像分隔与提取.md
+                  - 视频处理: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\支持向量机.md
+                  - 绘图及交互: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\绘图及交互.md
+                  - K近邻算法: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\K近邻算法.md
+                  - 支持向量机: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\支持向量机.md
+                  - K均值聚类: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\K均值聚类.md
                   - 人脸识别: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\人脸识别.md
       - Auto:
           - Autoit: Tutorial\Auto\Autoit.md
@@ -193,6 +213,12 @@ markdown_extensions:
   - pymdownx.superfences
   - admonition
   - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
