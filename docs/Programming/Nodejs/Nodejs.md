@@ -2,7 +2,7 @@
 
 ## 模块机制
 
- ### commonjs
+### commonjs
 
 ![](https://cdn.staticaly.com/gh/abottleofmilk/CDN@master/img/20221005183532.png)
 
@@ -134,13 +134,13 @@ async(function (err, results) {
 
   ```
 
-  ###  异步编程解决方案
+###  异步编程解决方案
 
 ❑事件发布/订阅模式。
 ❑ Promise/Deferred模式。
 ❑ 流程控制库。
 
-  ## 内存控制
+## 内存控制
 
 ### 事件驱动与高性能服务器
 
@@ -187,7 +187,7 @@ Node 的内存构成主要由通过 V8 进行分配的部分和 Node 自行分�
 
 ## 理解Buffer
 
- ### Buffer结构
+### Buffer结构
 
    Buffer是一个像Array的对象，但它主要用于操作字节。Buffer对象类似于数组，它的元素为16进制的两位数，即0到255的数值。Buffer是一个典型的JavaScript与C++结合的模块，它将性能相关部分用C++实现，将非性能相关的部分用JavaScript实现。给元素的赋值如果小于0，就将该值逐次加256，直到得到一个0到255之间的整数。如果得到的数值大于255，就逐次减256，直到得到0~255区间内的数值。如果是小数，舍弃小数部分，只保留整数部分。
 

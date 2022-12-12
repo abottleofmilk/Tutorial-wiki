@@ -320,3 +320,4 @@ extra:
 3. [Mkdocs Material使用记录](https://shafish.cn/blog/mkdocs/)
 4. [mkdocs-material - 中文搜索支持](https://blog.csdn.net/LostSpeed/article/details/127192971)
 5. [4行代码为Mkdocs实现简单中文搜索](https://zhuanlan.zhihu.com/p/411854801)
+6. [MkDocs zh](https://markdown-docs-zh.readthedocs.io/zh_CN/latest/)

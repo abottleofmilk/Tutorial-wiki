@@ -1,4 +1,5 @@
 site_name: 发烧的客体-Tutorial-Wiki
+site_url: https://abottleofmilk.github.io/Tutorial-wiki/
 nav:
   - Home: index.md
   - Programming:
@@ -18,7 +19,33 @@ nav:
       - Cpp: Programming\Cpp\Cpp.md
       - Csharp:
           - 图解C#:
-              - 异步编程: Programming\Csharp\图解C#\异步编程.md
+              - 异步编程: Programming\Csharp\图解C#\异步编程.md #   Programming\Cpp\Cpp基础\Cpp异常.md
+                # - Programming\Cpp\Cpp基础\Cpp继承与派生.md
+                # - Programming\Csharp\Csharp.md
+                # - Programming\Csharp\Net Core\依赖注入.md
+              - C#和.NET Core: Programming\Csharp\图解C#\C#和.NET Core.md
+              - C#编程概述: Programming\Csharp\图解C#\C#编程概述.md
+              - C#编程概述: Programming\Csharp\图解C#\LINQ.md
+              - 事件: Programming\Csharp\图解C#\事件.md
+              - 其他主题: Programming\Csharp\图解C#\其他主题.md
+              - 反射和特性: Programming\Csharp\图解C#\反射和特性.md
+              - 命名空间和程序集: Programming\Csharp\图解C#\命名空间和程序集.md
+              - 委托: Programming\Csharp\图解C#\委托.md
+              - 异常: Programming\Csharp\图解C#\异常.md
+              - 接口: Programming\Csharp\图解C#\接口.md
+              - 数组: Programming\Csharp\图解C#\数组.md
+              - 新增特性: Programming\Csharp\图解C#\新增特性.md
+              - 枚举: Programming\Csharp\图解C#\枚举.md
+              - 枚举器和迭代器: Programming\Csharp\图解C#\枚举器和迭代器.md
+              - 泛型: Programming\Csharp\图解C#\泛型.md
+              - 深入理解类: Programming\Csharp\图解C#\深入理解类.md
+              - 类和继承: Programming\Csharp\图解C#\类和继承.md
+              - 类型、存储和变量: Programming\Csharp\图解C#\类型、存储和变量.md
+              - 类的基本概念: Programming\Csharp\图解C#\类的基本概念.md
+              - 结构: Programming\Csharp\图解C#\结构.md
+              - 语句: Programming\Csharp\图解C#\语句.md
+              - 转换: Programming\Csharp\图解C#\转换.md
+              - 预处理指令: Programming\Csharp\图解C#\预处理指令.md
       - JavaScript: Programming\JavaScript\JavaScript.md
       - Java: Programming\Java\Java.md
       - TypeScript: Programming\TypeScript\TypeScript.md
@@ -32,7 +59,8 @@ nav:
           - Vue: Tutorial\front-end\vue\Vue基础.md
           - React: Tutorial\front-end\react\React基础.md
       - Python:
-          - mkdocs-material: Tutorial\python\mkdocs-material.md
+          - mkdocs-material:
+              - 颜色: Tutorial\python\mkdocs\mkdocs-material.md
           - scipy: Tutorial\python\scipy.md
           - Matplotlib:
               - 快速指南: Tutorial\python\Matplotlib\快速指南.md
@@ -56,6 +84,7 @@ nav:
               - OpenCV轻松入门-面向Python:
                   - OpenCV入门: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\OpenCV入门.md
                   - 图像处理基础: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\图像处理基础.md
+                  - 人脸识别: Tutorial\Open\OpenCV\OpenCV轻松入门-面向Python\人脸识别.md
       - Auto:
           - Autoit: Tutorial\Auto\Autoit.md
       - Science:
@@ -110,14 +139,35 @@ theme:
       default: material/robot-happy
       document: material/file-document
       Qt: simple/qt
+  palette:
+    # Palette toggle for light mode
+    # - accent: deep orange    # primary: deep purple
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      accent: deep orange
+    #   primary: green
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      accent: deep orange
   features:
-    - navigation.tracking
-    - navigation.tabs # 上方
-    #    - toc.integrate
+    - navigation.tracking # 启用锚点跟踪后，地址栏中的 URL 会自动更新为目录中突出显示的活动锚点。
+    - navigation.top # 当用户在向下滚动后再次开始向上滚动时，可以显示返回顶部按钮。
+    # - navigation.tabs.sticky
+    - navigation.tabs # 上方显示顶级导航
+    - navigation.sections # 分组显示 平铺
+    - toc.follow # 侧边栏跟随导航条
+    # - navigation.indexes
+    # - toc.integrate 自动展开
     - navigation.prune # 自动隐藏导航栏
     - search.highlight # 搜索内容匹配高亮
     - search.share #  当用户单击共享按钮时，URL 会自动复制到剪贴板。
     - search.suggest # 搜索建议
+    - content.code.annotate
 plugins:
   - tags:
       tags_file: tags.md
@@ -132,3 +182,17 @@ extra:
     Python: Python
     Document: document
     Qt: Qt
+#   version:
+#     provider: mike
+markdown_extensions:
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
