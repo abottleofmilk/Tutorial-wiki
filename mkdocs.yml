@@ -184,7 +184,7 @@ theme:
     - navigation.tabs # 上方显示顶级导航
     - navigation.sections # 分组显示 平铺
     - toc.follow # 侧边栏跟随导航条
-    # - navigation.indexes
+    - navigation.indexes
     # - toc.integrate 自动展开
     - navigation.prune # 自动隐藏导航栏
     - search.highlight # 搜索内容匹配高亮
