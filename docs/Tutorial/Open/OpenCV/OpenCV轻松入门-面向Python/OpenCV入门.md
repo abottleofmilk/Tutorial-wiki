@@ -6,10 +6,13 @@ retval = cv2.imread( filename[, flags] )
 + retval是返回值，其值是读取到的图像。如果未读取到图像，则返回“None”。
 + filename表示要读取的图像的完整文件名。
 + flags是读取标记。该标记用来控制读取文件的类型
+
 > flag类型
+
 ![](https://s2.loli.net/2022/12/09/aUX3NitrmjYQKMf.png)
 
 > 支持读取的图片类型
+
 ![](https://s2.loli.net/2022/12/09/pD4FE6imUCGlsA9.png)
 ### 显示图像
 + namedWindow函数 用来创建指定名称的窗口
@@ -17,6 +20,7 @@ retval = cv2.imread( filename[, flags] )
 + waitKey函数 用来等待按键，当用户按下键盘后，该语句会被执行，并获取返回值。
 + destroyWindow函数 用来释放（销毁）指定窗口
 + destroyAllWindows函数 用来释放（销毁）所有窗口
+
 ```python
 None = cv2.namedWindow( winname )
 None = cv2.imshow( winname, mat )
@@ -24,18 +28,23 @@ retval = cv2.waitKey( [delay] )
 None = cv2.destroyWindow( winname )
 None = cv2.destroyAllWindows( )
 ```
+
 + winname是窗口名称。
 + mat是要显示的图像。
 + retval表示返回值。如果没有按键被按下，则返回-1；如果有按键被按下，则返回该按键的ASCII码。
 + delay表示等待键盘触发的时间，单位是ms。当该值是负数或者零时，表示无限等待。该值默认为0。(一直等待。直到有按下键盘按键的事件发生时，才会执行后续程序。)
+
+
 ```python
 import cv2
 lena=cv2.imread("lena.bmp")
 cv2.namedWindow("lesson")
 cv2.imshow("lesson", lena )
 ```
+
 1. 如果参数delay的值为0，则程序会一直等待。直到有按下键盘按键的事件发生时，才会执行后续程序。
 2. 如果参数delay的值为一个正数，则在这段时间内，程序等待按下键盘按键。当有按下键盘按键的事件发生时，就继续执行后续程序语句；如果在delay参数所指定的时间内一直没有这样的事件发生，则超过等待时间后，继续执行后续的程序语句。
+   
 ```python
 import cv2
 lena=cv2.imread("lena.bmp")
