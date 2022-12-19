@@ -130,6 +130,14 @@ nav:
           - QML: Tutorial\GUI\QML.md
           - WPF: Tutorial\GUI\WPF.md
           - MFC: Tutorial\GUI\MFC.md
+      - 数字图形处理与计算机视觉:
+          - 机器视觉与数字图像基础:
+              - 绪论: Tutorial/数字图像处理与计算机视觉/机器视觉与数字图像基础/绪论.md
+          - 机器视觉使用halcon描述与实现:
+              - 图形的预处理: Tutorial/数字图像处理与计算机视觉/机器视觉使用halcon描述与实现/图形的预处理.md
+              - 数组的应用: Tutorial/数字图像处理与计算机视觉/机器视觉使用halcon描述与实现/数组的应用.md
+          - 计算机图形学:
+             - Halcon: Tutorial/数字图像处理与计算机视觉/计算机图形学/Halcon/halcon入门.md
   - Tools:
       - Git: tools\Git.md
       - Sigil: tools\Sigil.md
